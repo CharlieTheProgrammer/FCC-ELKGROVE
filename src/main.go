@@ -1,20 +1,32 @@
 package main
 
 import (
-  "net/http"
-  "strings"
+	"fmt"
+	"net/http"
+	"os"
+
+	"./controllers"
+
+	"github.com/gorilla/mux"
 )
 
-func sayHello(w http.ResponseWriter, r *http.Request) {
-  message := r.URL.Path
-  message = strings.TrimPrefix(message, "/")
-  message = "Hello " + message
-  w.Write([]byte(message))
-}
-
 func main() {
-  http.HandleFunc("/", sayHello)
-  if err := http.ListenAndServe(":8080", nil); err != nil {
-    panic(err)
-  }
+
+	router := mux.NewRouter()
+
+	router.HandleFunc("/data", controllers.GetAllData).Methods("GET")
+
+	//environment variable
+	port := os.Getenv("PORT")
+	if port == "" {
+		port = "8000" //localhost
+	}
+
+	fmt.Println(port)
+
+	//Launch the app
+	err := http.ListenAndServe(":"+port, router)
+	if err != nil {
+		fmt.Print(err)
+	}
 }
