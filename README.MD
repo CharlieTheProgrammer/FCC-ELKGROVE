@@ -1,6 +1,6 @@
 # Getting Started
 Download Go -->[https://golang.org/dl/]
-clone the repository and switch to Go branch \n
+clone the repository and switch to Go branch
 "cd src" && go run main.go
 
 
