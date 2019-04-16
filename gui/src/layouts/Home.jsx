@@ -11,6 +11,7 @@ class Home extends Component {
     };
   }
 
+  // Dynamic Route helper
   getRoutes = routes => {
     return routes.map((prop, key) => {
         return (

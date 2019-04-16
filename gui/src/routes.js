@@ -1,7 +1,7 @@
 
 import AllData from "views/all_data.jsx";
 
-
+// Dynamic routes
 var routes = [
   {
     path: "/",
