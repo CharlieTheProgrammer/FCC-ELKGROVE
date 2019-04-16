@@ -17,3 +17,9 @@
     - go to projects section of github and look for task need to be done. if you took the task(in progress), make sure to edit and put your name inside.
     - check the issue section and help someone debug their problem.
     - always help improve the documentation and tutorials list.
+
+# How to add features or change the code
+    - Create a seperate branch
+    - modify that branch
+    - push your branch
+    - go to github, choose the branch then pull request.
