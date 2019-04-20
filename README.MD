@@ -17,7 +17,7 @@
     - use google to log in
         1. age of person
 
-#Schema JSON
+# Schema JSON
     {
         - First Name
         - Last Name
