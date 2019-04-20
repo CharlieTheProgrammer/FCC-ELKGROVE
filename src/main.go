@@ -5,7 +5,7 @@ import (
 	"net/http"
 	"os"
 
-	"./controllers"
+	"github.com/user/myProject/src/controllers"
 
 	"github.com/gorilla/mux"
 )
@@ -20,7 +20,7 @@ func main() {
 	//environment variable
 	port := os.Getenv("PORT")
 	if port == "" {
-		port = "8000" //localhost
+		port = "8080" //localhost
 	}
 
 	fmt.Println(port)

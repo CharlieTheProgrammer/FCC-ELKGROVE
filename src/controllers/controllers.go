@@ -2,8 +2,8 @@ package controllers
 
 import (
 	"net/http"
-
-	u "../utils"
+	// gotta use GOPATH TODO
+	u "github.com/user/myProject/src/utils"
 )
 
 var GetAllData = func(w http.ResponseWriter, r *http.Request) {
