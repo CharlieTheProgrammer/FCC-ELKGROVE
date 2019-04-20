@@ -16,7 +16,9 @@
         
     - use google to log in
         1. age of person
+
 #TABLES
+
     - user table
         1. first name
         2. last name
