@@ -31,10 +31,9 @@
         1. link of image
         2. google vision api result
         3. user foreign key
-        4. location foreign key
     - location table
         1. street
         2. City
         3. State
         4. Zipcode
-        5. Foreign key of user
+        5. Foreign key of food
