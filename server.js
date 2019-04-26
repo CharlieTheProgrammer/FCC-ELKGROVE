@@ -1,24 +1,27 @@
-'use strict';
+// initialize packages
 const express = require('express');
 const bodyParser = require('body-parser');
+const morgan = require('morgan');
+const cors = require('cors');
+const log = require('simple-node-logger').createSimpleLogger('project.log');
+require('dotenv').config()
 
+
+//create express server
 const app = express();
 
-// CORS
-app.use(function (req, res, next) {
-    res.header('Access-Control-Allow-Origin', '*');
-    res.header('Access-Control-Allow-Headers', 'Content-Type,Authorization');
-    res.header('Access-Control-Allow-Methods', 'GET,POST,PUT,PATCH,DELETE');
-    if (req.method === 'OPTIONS') {
-        return res.send(204);
-    }
-    next();
-});
+// MIDDLEWARES
+app.use(morgan("dev"));
+app.use(bodyParser.json());
+app.use(cors());
+log.setLevel('info');
 
-app.get('/', (req, res) => {
-    res.json("Oh, Hi Mark");
-});
+// importing routes
+const dataRoute = require("./routes/dataRoute.js")
 
+
+// Use Routes
+app.use("/data", dataRoute)
 app.use('*', (req, res) => {
     return res.status(404).json({ message: 'Path Not Found' });
 });
