@@ -3,10 +3,11 @@ package controllers
 import (
 	"net/http"
 	"sort"
-
+  
 	// gotta use GOPATH TODO
 	// u "github.com/user/myProject/src/utils"
 	u "../utils"
+
 )
 
 var GetAllData = func(w http.ResponseWriter, r *http.Request) {
