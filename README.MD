@@ -17,3 +17,7 @@ Download Go -->[https://golang.org/dl/]
     │
     └───utils
             util.go
+            
+# STRESS LOAD
+    1. npm install -g artillery
+    2. artillery quick --count 50 -n 40 http://localhost:8080/data/
