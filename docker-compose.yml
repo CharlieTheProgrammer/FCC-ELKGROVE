@@ -1,0 +1,16 @@
+version: '3.6'
+
+services:
+  #Backend api
+  node_server:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    command: npm run dev
+    working_dir: /user/src/server
+    restart: always
+    ports:
+      - "4000:4000"
+    volumes:
+      - /user/src/server/node_modules
+      - ./:/user/src/server

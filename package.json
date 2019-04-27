@@ -4,6 +4,7 @@
   "description": "",
   "main": "server.js",
   "scripts": {
+    "dev": "nodemon server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -23,5 +24,8 @@
     "express-status-monitor": "^1.2.5",
     "morgan": "^1.9.1",
     "simple-node-logger": "^18.12.22"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.11"
   }
 }
