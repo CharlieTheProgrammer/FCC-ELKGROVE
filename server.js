@@ -1,10 +1,10 @@
 // initialize packages
+require('dotenv').config()
 const express = require('express');
 const bodyParser = require('body-parser');
 const morgan = require('morgan');
 const cors = require('cors');
 const log = require('simple-node-logger').createSimpleLogger('project.log');
-require('dotenv').config()
 
 
 //create express server
