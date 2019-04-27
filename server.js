@@ -7,10 +7,12 @@ const cors = require('cors');
 const log = require('simple-node-logger').createSimpleLogger('project.log');
 
 
+
 //create express server
 const app = express();
 
 // MIDDLEWARES
+// app.use(require('express-status-monitor')())
 app.use(morgan("dev"));
 app.use(bodyParser.json());
 app.use(cors());
