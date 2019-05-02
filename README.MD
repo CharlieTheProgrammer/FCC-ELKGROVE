@@ -38,4 +38,6 @@
         5. Foreign key of food
 
 # ENTITY DIAGRAM
-    ![Entity Diagram](entity_diagram.PNG)
+
+![Entity Diagram](entity_diagram.PNG)
+
