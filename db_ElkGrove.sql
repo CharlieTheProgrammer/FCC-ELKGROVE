@@ -32,9 +32,9 @@ CREATE TABLE FOOD_LOCATION (
 	city			VARCHAR(50)		NOT NULL,
 	state			VARCHAR(50)		NOT NULL,
 	zipcode			INT				NOT NULL,
-	food_id			INT				NOT NULL,
+	user_id			INT				NOT NULL,
 	PRIMARY KEY (location_id),
-	FOREIGN KEY (food_id) REFERENCES FOODS_PICTURE(food_id),
+	FOREIGN KEY (user_id) REFERENCES USERS(user_id),
 );
 
 

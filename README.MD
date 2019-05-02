@@ -18,7 +18,6 @@
         1. age of person
 
 #TABLES
-
     - user table
         1. first name
         2. last name
@@ -37,3 +36,6 @@
         3. State
         4. Zipcode
         5. Foreign key of food
+
+# ENTITY DIAGRAM
+    ![Entity Diagram](entity_diagram.PNG)
