@@ -12,7 +12,7 @@ VALUES
     ('https://picture1.com', 'chikcen', 2),
     ('https://picture2.com', 'beef', 3);
 
-INSERT INTO FOOD_LOCATION (street, city, state, zipcode, food_id)
+INSERT INTO FOOD_LOCATION (street, city, state, zipcode, user_id)
 VALUES 
     ('3111 Hel Way', 'Sacramento', 'California', 95758, 1),
     ('1313 Hee Way', 'Folsom', 'California', 44112, 2),
