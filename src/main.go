@@ -4,15 +4,22 @@ import (
 	"fmt"
 	"net/http"
 	"os"
-  
+
 	// "github.com/user/myProject/src/controllers"
 	"./controllers"
-
+	"github.com/gocql/gocql"
 	"github.com/gorilla/mux"
 )
 
 // Main function
 func main() {
+
+	// connect to the cluster
+	cluster := gocql.NewCluster("192.168.99.100")
+	cluster.Keyspace = "system_distributed"
+	cluster.Consistency = gocql.Quorum
+	session, _ := cluster.CreateSession()
+	defer session.Close()
 
 	router := mux.NewRouter()
 
